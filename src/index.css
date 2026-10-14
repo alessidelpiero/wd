@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #17594b;
+  --color-primary-dark: #12473C;
+  --color-ink: #202D28;
+  --color-muted: #5b6861;
+  --color-muted2: #8CAAA0;
+  --color-surface: #FAFBF7;
+  --color-elevated: #FAFBF7;
+  --color-card: #E9EFDF;
+  --color-line: #DCE3DC;
+  --color-input-bg: #FFFEFB;
+  --color-input-border: #AEBBB0;
+
+  --font-sans: "Vazirmatn", system-ui, sans-serif;
+
+  --radius-card: 28px;
+  --radius-input: 11px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  line-height: 1.9;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-ink);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover { color: var(--color-primary); }
+
+/* === Layout === */
+.wrap {
+  max-width: 1351px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* === Buttons === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 100px;
+  padding: 12px 26px;
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  line-height: 1.5;
+  font-family: inherit;
+  font-size: 14px;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  background: var(--color-primary-dark);
+  color: #fff;
+}
+
+/* === Focus === */
+.btn:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: rgb(162, 80, 23) solid 3px;
+  outline-offset: 5px;
+}
+
+/* === Card === */
+.card {
+  background: var(--color-card);
+  border-radius: 28px;
+  padding: 28px;
+  line-height: 2.2;
+}
+
+/* === Typography === */
+h1 {
+  font-size: 62px;
+  font-weight: 900;
+  line-height: 1.55;
+  letter-spacing: -1.8px;
+  margin: 0 0 16px;
+}
+h2 {
+  font-size: 43px;
+  font-weight: 800;
+  line-height: 1.55;
+  letter-spacing: -0.7px;
+  margin: 0 0 24px;
+}
+h3 {
+  font-size: 19px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+/* === Forms === */
+label {
+  display: block;
+  font-size: 14px;
+  margin: 12px 0 6px;
+}
+input,
+textarea {
+  width: 100%;
+  background: var(--color-input-bg);
+  border: 1px solid var(--color-input-border);
+  border-radius: 11px;
+  padding: 11px 13px;
+  font-family: inherit;
+  font-size: 15px;
+  color: var(--color-ink);
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+/* === Responsive === */
+@media (max-width: 900px) {
+  h1 { font-size: 43px; }
+}
+@media (max-width: 650px) {
+  h1 { font-size: 34px; }
+  h2 { font-size: 28px; }
+  .wrap { padding: 0 16px; }
+}
+/* === Section anchors: هدر روی بخش‌ها نیفتد === */
+section[id],
+footer {
+  scroll-margin-top: 96px;
+}
+
+/* === Grids responsive === */
+.services-grid,
+.process-grid,
+.portfolio-grid,
+.form-grid {
+  display: grid;
+}
+.services-grid { grid-template-columns: repeat(2, 1fr); }
+.process-grid { grid-template-columns: repeat(4, 1fr); }
+.portfolio-grid { grid-template-columns: repeat(3, 1fr); }
+.form-grid { grid-template-columns: 1fr 1fr; }
+
+@media (max-width: 900px) {
+  .process-grid { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 650px) {
+  .services-grid,
+  .form-grid { grid-template-columns: 1fr; }
+  .process-grid { grid-template-columns: 1fr; }
+}

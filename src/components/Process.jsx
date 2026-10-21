@@ -9,7 +9,7 @@ export default function Process() {
   return (
     <section id="process" style={{ padding: "64px 0", background: "#fff", borderRadius: 28 }}>
       <div style={{ padding: "48px 32px" }}>
-        <h2 style={{ textAlign: "center" }}>روند کار با ما</h2>
+        <h2 style={{ textAlign: "center" }}>مسیر پروژه با ما</h2>
         <p style={{ textAlign: "center", color: "var(--color-muted)", margin: "0 auto 40px", maxWidth: 640 }}>
           بدون سردرگمی و بدون غافلگیری: شما از ابتدا می‌دانید پروژه کجای مسیر است.
         </p>

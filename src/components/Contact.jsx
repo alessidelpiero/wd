@@ -54,7 +54,7 @@ export default function Contact() {
   return (
     <section id="contact" style={{ padding: "64px 0 80px" }}>
       <div style={{ maxWidth: 760, margin: "0 auto", textAlign: "center" }}>
-        <h2>پروژه‌تان را با ما در میان بگذارید</h2>
+        <h2>تماس با ما </h2>
         <p style={{ color: "var(--color-muted)", margin: "0 0 32px" }}>
           فرم زیر را پر کنید. بعد از بررسی، با شما تماس می‌گیریم و مشاوره اولیه را رایگان انجام می‌دهیم.
         </p>
